@@ -1,5 +1,11 @@
+import { RomanCommandPalette } from './components/RomanCommandPalette';
+
 function App() {
-  return 'Hello world';
+  return (
+    <>
+      <RomanCommandPalette />
+    </>
+  );
 }
 
 export default App;
