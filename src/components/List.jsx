@@ -1,3 +1,5 @@
+import cx from 'classnames';
+
 export function List(props) {
   console.log(props);
 
@@ -9,7 +11,11 @@ export function List(props) {
           .map((item, i) => (
             <li
               key={item.id}
-              className="flex items-center bg-slate-200 gap-2 p-2 rounded-lg"
+              className={cx(
+                'flex items-center gap-2 p-2 rounded-lg transition-all duration-700 hover:cursor-pointer hover:bg-black hover:text-white',
+                props.selectedItem === item ? 'bg-slate-400' : 'bg-slate-200'
+              )}
+              onClick={(event) => props.onSelectItem(item)}
             >
               <img
                 className="w-12 rounded-full bg-slate-400"
