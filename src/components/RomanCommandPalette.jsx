@@ -12,7 +12,7 @@ export function RomanCommandPalette() {
   const [page, setPage] = useState(0);
   const [searchInLyrics, setSearchInLyrics] = useState(false);
   const songs = useGet(
-    'http://192.168.108.75:8080/' +
+    'http://3.64.60.235:8080/' +
       searchTerm +
       '?page=' +
       page +
